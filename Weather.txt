@@ -1,1 +1,3 @@
-Sunny 95 Degrees
+Sunny 95 Degrees aug 25
+Sunny 100 Degrees aug 26
+Sunny 98 Degrees Aug 27
