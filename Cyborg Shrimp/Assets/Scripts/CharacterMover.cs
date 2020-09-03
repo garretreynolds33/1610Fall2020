@@ -15,6 +15,8 @@ public class CharacterMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        x = speed*Input.GetAxis("Horizontal") * Time.deltaTime;
+        y = speed*Input.GetAxis("Vertical") * Time.deltaTime;
         var vInput = speed * Input.GetAxis("Vertical") * Time.deltaTime;
         var hInput = speed * Input.GetAxis("Horizontal") * Time.deltaTime;
         transform.Translate(x,y,z);

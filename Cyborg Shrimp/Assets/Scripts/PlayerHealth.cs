@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
+    public float heath = 10;
+        
     // Start is called before the first frame update
     void Start()
     {
