@@ -1,32 +1,30 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class NewMover : MonoBehaviour
 {
-    public CharacterController controller;
-    private Vector3 moveDirection;
-    public float movespeed = 3f, gravity = -9.81f, jumpForce = 5f;
-    private float yDirection;
+   public CharacterController controller;
+   public float movespeed = 5f, gravity = -9.81f, jumpForce = 10f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        var moveSpeedInput = movespeed * Input.GetAxis("Horizontal");
-        moveDirection.Set(moveSpeedInput, yDirection ,0);
+   private Vector3 moveDirection;
+   private float yDirection;
+   private void Update()
+   {
+      var movespeedinput = movespeed * Input.GetAxis("Horizontal");
+      moveDirection.Set(movespeedinput,yDirection,0);
 
-        yDirection += gravity * Time.deltaTime;
-        
-        if (controller.isGrounded && moveDirection.y < 0)
-        {
-            yDirection = -1f;
-        }
-        
+      yDirection += gravity * Time.deltaTime;
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            yDirection = jumpForce;
-        }
-        
-        controller.Move(moveDirection*Time.deltaTime);
-    }
+      if (controller.isGrounded && moveDirection.y < 0)
+      {
+         yDirection = -1f;
+      }
+
+      if (Input.GetButtonDown("Jump"))
+      {
+         yDirection = jumpForce;
+      }
+
+      var movement = moveDirection * Time.deltaTime;
+      controller.Move(movement);
+   }
 }
