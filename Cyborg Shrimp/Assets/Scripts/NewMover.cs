@@ -1,12 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class NewMover : MonoBehaviour
 {
-   public CharacterController controller;
+   private CharacterController controller;
    public float movespeed = 5f, gravity = -9.81f, jumpForce = 10f;
 
    private Vector3 moveDirection;
    private float yDirection;
+
+   private void Start()
+   {
+      controller = GetComponent<CharacterController>();
+   }
+
    private void Update()
    {
       var movespeedinput = movespeed * Input.GetAxis("Horizontal");
