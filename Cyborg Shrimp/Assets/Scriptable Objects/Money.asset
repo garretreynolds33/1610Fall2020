@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 343b85883e6683e4e8cacd09ecca884c, type: 3}
-  m_Name: Score
+  m_Script: {fileID: 11500000, guid: 13c0cdac2dd3b474da5c5d4f6be414db, type: 3}
+  m_Name: Money
   m_EditorClassIdentifier: 
-  value: 0
+  value: 70

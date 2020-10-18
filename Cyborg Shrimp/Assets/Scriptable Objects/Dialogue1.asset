@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 343b85883e6683e4e8cacd09ecca884c, type: 3}
-  m_Name: Score
+  m_Script: {fileID: 11500000, guid: 07dd0b0e211812247908cd7722136df4, type: 3}
+  m_Name: Dialogue1
   m_EditorClassIdentifier: 
-  value: 0
+  value: What is your Quest?
