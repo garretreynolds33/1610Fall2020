@@ -7,6 +7,7 @@ public class PlayerControllerX : MonoBehaviour
     public bool gameOver;
     public bool isLowEnough;
 
+    public float yRange = 15f;
     public float floatForce;
     private float gravityModifier = 1.5f;
     private Rigidbody playerRb;
@@ -40,6 +41,11 @@ public class PlayerControllerX : MonoBehaviour
             playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
             isLowEnough = true;
         }
+
+        if (transform.position.y > yRange)
+        {
+            transform.position = new Vector3(transform.position.x, yRange, transform.position.z);
+        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -61,6 +67,11 @@ public class PlayerControllerX : MonoBehaviour
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
 
+        }
+
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            playerRb.AddForce(Vector3.up * 2, ForceMode.Impulse);
         }
 
     }
