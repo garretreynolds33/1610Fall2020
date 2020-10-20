@@ -18,6 +18,7 @@ public class PlayerControllerX : MonoBehaviour
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
+    public AudioClip bounceSound;
 
 
     // Start is called before the first frame update
@@ -71,7 +72,8 @@ public class PlayerControllerX : MonoBehaviour
 
         if (other.gameObject.CompareTag("Ground"))
         {
-            playerRb.AddForce(Vector3.up * 2, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+            playerAudio.PlayOneShot(bounceSound, 1f);
         }
 
     }

@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 977102738}
   - component: {fileID: 977102737}
   - component: {fileID: 977102736}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 1101970968}
   - component: {fileID: 1101970967}
   - component: {fileID: 1101970966}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +918,7 @@ GameObject:
   - component: {fileID: 1346541842}
   - component: {fileID: 1346541841}
   - component: {fileID: 1346541840}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 1675532642}
   - component: {fileID: 1675532641}
   - component: {fileID: 1675532645}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: HealthDamager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1191,29 +1191,17 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 26868219129932c4c96fcfd57b894958, type: 2}
-        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: 85fb2067de2c19e4c9375975c544cc7c, type: 2}
+        m_TargetAssemblyTypeName: BoolData, Assembly-CSharp
         m_MethodName: UpdateValue
-        m_Mode: 4
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: -0.2
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 26868219129932c4c96fcfd57b894958, type: 2}
-        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
-        m_MethodName: DisplayImage
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 796685524}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1675532640}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -1241,7 +1229,7 @@ GameObject:
   - component: {fileID: 1743621913}
   - component: {fileID: 1743621917}
   - component: {fileID: 1743621912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
