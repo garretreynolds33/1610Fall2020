@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Targets : MonoBehaviour
 {
@@ -38,6 +40,16 @@ public class Targets : MonoBehaviour
 
     Vector3 RandomeSpwanPos()
     {
-        return new Vector3(Random.Range(-xRange,xRange), -ySpawnPos);
+        return new Vector3(Random.Range(-xRange,xRange), ySpawnPos);
+    }
+
+    private void OnMouseDown()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
     }
 }
