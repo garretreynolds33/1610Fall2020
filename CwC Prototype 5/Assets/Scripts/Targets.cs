@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 public class Targets : MonoBehaviour
 {
     private Rigidbody targetRb;
-    private float minSpeed = 12;
+    private float minSpeed = 13;
     private float maxSpeed = 16;
     private float maxTorque = 10;
     private float xRange = 4;
@@ -50,9 +50,13 @@ public class Targets : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Destroy(gameObject);
-        gameManager.UpdateScore(pointValue);
-        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+        if (gameManager.isGameActive)
+        {
+            Destroy(gameObject);
+            gameManager.UpdateScore(pointValue);
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);  
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
