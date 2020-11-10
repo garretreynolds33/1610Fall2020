@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f4ea449ae66ff8408812217f9e08c33, type: 3}
-  m_Name: GameOver
+  m_Script: {fileID: 11500000, guid: 7742b87633f109044a64f371004f27a9, type: 3}
+  m_Name: ReplayAction
   m_EditorClassIdentifier: 
-  value: 0
