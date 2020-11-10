@@ -9,21 +9,18 @@ public class GameManager : MonoBehaviour
 {
 
     public List<GameObject> targets;
-    private float spawnRate = 1f;
     public TextMeshProUGUI scoreText;
-    private int score;
     public TextMeshProUGUI gameOverText;
-    public bool isGameActive;
     public Button restartButton;
+    public GameObject titleScreen;
+    public bool isGameActive;
+    private int score;
+    private float spawnRate = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        isGameActive = true;
-        StartCoroutine(SpawnTarget());
-        score = 0;
-        UpdateScore(0);
-        
+       
     }
 
     // Update is called once per frame
@@ -59,5 +56,18 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StartGame(int difficulty)
+    {
+        isGameActive = true;
+        score = 0;
+        spawnRate /= difficulty;
+        
+        StartCoroutine(SpawnTarget());
+        UpdateScore(0);
+        
+        titleScreen.gameObject.SetActive(false);
+
     }
 }
