@@ -5,10 +5,10 @@ public class CharacterMover : MonoBehaviour
 {
     private CharacterController controller;
     private float moveSpeed = 7f;
-
     private float yRange = 5f;
-
     private Vector3 moveDirection;
+
+    public GameObject laserPrefab;
 
     private void Start()
     {
@@ -41,6 +41,11 @@ public class CharacterMover : MonoBehaviour
         } else if (transform.position.x < -13)
         {
             transform.position = new Vector3(-13, transform.position.y, transform.position.z);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(laserPrefab, transform.position, laserPrefab.transform.rotation);
         }
     }
 }
