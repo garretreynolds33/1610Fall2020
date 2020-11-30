@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserMover : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
-    public float speed = 50f;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +13,6 @@ public class LaserMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right * (Time.deltaTime * speed));
+        
     }
 }
