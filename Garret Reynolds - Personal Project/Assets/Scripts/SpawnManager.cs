@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject[] prefabs;
+    private float spawnRangeY = 4.5f;
+    private float spawnPosX = 16f;
+    private float startDely = 5f;
+    private float spawnInterval = 1.5f;
+    
     void Start()
     {
-        
+        InvokeRepeating("SpawnRandomObstacles", startDely, spawnInterval);
     }
 
-    // Update is called once per frame
-    void Update()
+    void SpawnRandomObstacles()
     {
-        
+        int objectIndext = Random.Range(0, prefabs.Length);
+        Vector3 spawnPos = new Vector3(spawnPosX, Random.Range(-spawnRangeY, spawnRangeY), 0);
+
+        Instantiate(prefabs[objectIndext], spawnPos, prefabs[objectIndext].transform.rotation);
     }
+    
 }
