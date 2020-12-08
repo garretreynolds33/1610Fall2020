@@ -45,7 +45,7 @@ public class CharacterMover : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(laserPrefab, transform.position, laserPrefab.transform.rotation);
+            Instantiate(laserPrefab, new Vector3(transform.position.x+3, transform.position.y, 0), laserPrefab.transform.rotation);
         }
     }
 }
