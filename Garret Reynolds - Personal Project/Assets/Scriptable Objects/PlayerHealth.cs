@@ -10,5 +10,6 @@ public class PlayerHealth : ScriptableObject
     public void UpdateValue(float number)
     {
         value += number;
+        Debug.Log(value);
     }
 }
