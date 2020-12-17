@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class PowerUpSpawner : MonoBehaviour
 {
     public GameObject[] prefabs;
     private float spawnRangeY = 4.5f;
     private float spawnPosX = 16f;
     private float startDely = 5f;
-    private float spawnInterval = 1f;
-    
+    private float spawnInterval = 6f;
+
     void Start()
     {
         InvokeRepeating("SpawnRandomObstacles", startDely, spawnInterval);
@@ -22,5 +22,4 @@ public class SpawnManager : MonoBehaviour
 
         Instantiate(prefabs[objectIndext], spawnPos, prefabs[objectIndext].transform.rotation);
     }
-    
 }
